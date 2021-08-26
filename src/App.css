@@ -1,39 +1,102 @@
 .App {
-  text-align: center;
+	font-family: Avenir, Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: rgb(219, 219, 219);
+	margin: 20px auto;
+	width: 90%;
+	max-width: 800px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-task {
+	width: 80%;
+	margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.todo-list ul {
+	padding: 0 10px 10px 10px;
+	list-style-type: none;
 }
 
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.todo-list li {
+	padding: 10px;
+	cursor: pointer;
+	margin: 10px 0;
+	border-radius: 4px;
+	background: rgb(240, 240, 240);
+	color: black;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.todo-list li input[type="checkbox"] {
+	-ms-transform: scale(2); /* IE */
+	-moz-transform: scale(2); /* FF */
+	-webkit-transform: scale(2); /* Safari and Chrome */
+	-o-transform: scale(2); /* Opera */
+	transform: scale(2);
+	padding: 10px;
+	float: right;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.todo-list li.completed {
+	background: rgb(119, 218, 243);
+	text-decoration: line-through;
+}
+
+.todo-list li button {
+	float: right;
+	margin-right: 20px;
+	border-radius: 5px;
+}
+
+.todo-list li button:hover {
+	cursor: pointer;
+	background: royalblue;
+	color: white;
+}
+
+.navbar {
+	padding: 5px;
+	text-align: center;
+	background: rgb(240, 240, 240);
+	color: black;
+}
+
+.navbar ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+}
+
+form {
+	padding: 10px;
+}
+
+input[type="text"] {
+	width: 80%;
+	box-sizing: border-box;
+	padding: 10px;
+	display: block;
+	margin: 15px auto;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+}
+
+input[type="submit"] {
+	margin: 10px auto;
+	padding: 15px 20px;
+	border: 0;
+	display: block;
+	border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+	background-color: aquamarine;
+}
+
+h3 {
+	margin: 15px 20px;
+	text-align: center;
 }
